@@ -9,19 +9,17 @@ const jwt = require('jsonwebtoken')
 const auth = require('./middleware/auth');
 const cookieparser = require('cookie-parser')
 const {collection,artical} = require('./models/Schema');
-const { any } = require('webidl-conversions');
 const port = process.env.port || 8080;
 
 
 const template_path = path.join(__dirname ,'public')
 // console.log(template_path)
 
-
+app.use(express.static(template_path))
 app.use(express.json());
 app.use(cookieparser());
 app.set("view engine","ejs");
 app.use(express.urlencoded({extended:false}))
-
 
 
 app.get('/',(req,res)=>{
