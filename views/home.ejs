@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+</head>
+<body>
+   <div class="container">
+    <h1 class="mb-4">Blog Articles</h1>
+    <a href="/new" class="btn btn-success">New Articles</a>
+
+    <% data.forEach((element,index) => { %>
+     
+        <div class="card mt-4" >
+            <div class="card-body">
+                <h4 class="card-title"><%= element.title %></h4>
+                <div class="card-subtitle text-muted mb-2">
+                    <%= element.createdAt.toLocaleDateString() %>
+                </div>
+                <div class="card-text mb-2">
+                    <%= element.desc%>
+                </div>
+                <a href="/read/<%= element.id %>" class="btn btn-primary">Read More</a>
+                <a href="/delete/<%= element.id %>" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+
+    <% }) %>
+
+   </div>
+
+
+</body>
+
+<!-- jQuery library -->
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>

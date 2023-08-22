@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap');
+
+        * {
+            font-family: 'poppins', sans-serif;
+        }
+
+       body{
+        background-color: blueviolet;
+        color: white;
+       }
+        
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 90vh;
+        }
+
+        .container {
+            width: 350px;
+            display: flex;
+            flex-direction: column;
+            padding: 0 15px 0 15px;
+
+        }
+
+        span {
+            color: #fff;
+            font-size: small;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 10px 0;
+        }
+
+        header {
+            color: #fff;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0 10px 0;
+        }
+
+        .input-field .input {
+            height: 45px;
+            width: 87%;
+            border: none;
+            border-radius: 30px;
+            color: black;
+            font-size: 15px;
+            padding: 0 0 0 45px;
+            background: rgba(255, 255, 255, 0.1);
+            outline: none;
+        }
+
+        i {
+            position: relative;
+            top: -33px;
+            left: 17px;
+            color: #fff;
+        }
+
+        ::-webkit-input-placeholder {
+            color: #fff;
+        }
+
+        .submit {
+            border: none;
+            border-radius: 30px;
+            font-size: 15px;
+            height: 45px;
+            outline: none;
+            width: 100%;
+            color: black;
+            background: rgba(255, 255, 255, 0.7);
+            cursor: pointer;
+            transition: .3s;
+        }
+
+        .submit:hover {
+            box-shadow: 1px 5px 7px 1px rgba(4, 209, 250, 0.745);
+        }
+
+        .two-col {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            color: #fff;
+            font-size: small;
+            margin-top: 10px;
+        }
+
+        .one {
+            display: flex;
+        }
+
+        label a {
+            text-decoration: none;
+            color: #fff;
+        }
+        a{
+            font-family: 'poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color:#fff;
+            text-decoration-color: white;
+        }
+    </style>
+
+    <title>SignUp</title>
+
+</head>
+
+<body>
+    <div class="box">
+        <div class="container">
+
+            <div class="top">
+                <header>SignUp</header>
+            </div>
+
+            <form action="/signup" method="post">
+                <div class="input-field">
+                    <input type="name" class="input" placeholder="name" id="" name="name"  required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-field">
+                    <input type="email" class="input" placeholder="Email" id="" name="email" required>
+                    <i class='bx bx-user'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="Password" class="input" placeholder="Password" id="" name="password" required>
+                    <i class='bx bx-lock-alt'></i>
+                </div>
+
+                <div class="input-field">
+                    <input type="submit" class="submit">
+                </div>
+               <a href="login">**Already Have Acoount**</a>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
