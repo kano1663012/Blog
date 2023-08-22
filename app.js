@@ -13,8 +13,9 @@ const port = process.env.port || 8080;
 
 
 const template_path = path.join(__dirname ,'public')
+// console.log(template_path);
 // console.log(template_path)
-
+app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(template_path))
 app.use(express.json());
 app.use(cookieparser());
@@ -22,9 +23,14 @@ app.set("view engine","ejs");
 app.use(express.urlencoded({extended:false}))
 
 
-app.get('/',(req,res)=>{
-    res.render("signup")
+app.get('/', async(req,res)=>{
+    try {
+        res.render("signup")
+    } catch (error) {
+        console.log(error);
+    }
 })
+
 
 app.get('/login', async(req,res)=>{
     try {
